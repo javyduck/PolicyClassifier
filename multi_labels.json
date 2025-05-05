@@ -1,0 +1,249 @@
+{
+  "Fraudulent reporting": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Illicit financing documents": [
+    "1"
+  ],
+  "Insider trading": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "KYC evasion": [
+    "1"
+  ],
+  "Laundering networks": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Market manipulation": [
+    "1",
+    "2",
+    "3",
+    "5"
+  ],
+  "Misleading advice": [
+    "1"
+  ],
+  "Ownership concealment": [
+    "1"
+  ],
+  "Privacy leak": [
+    "1",
+    "5"
+  ],
+  "Pump and dump": [
+    "1"
+  ],
+  "Regulatory evasion": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Sanctions evasion": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Security hacking": [
+    "1"
+  ],
+  "Social engineering": [
+    "1",
+    "3"
+  ],
+  "Structuring evasion": [
+    "1"
+  ],
+  "Cyberattacks": [
+    "2",
+    "4",
+    "5"
+  ],
+  "Disinformation": [
+    "2"
+  ],
+  "Falsified records": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Identity fraud": [
+    "2",
+    "3"
+  ],
+  "Insurance fraud": [
+    "2",
+    "4",
+    "5"
+  ],
+  "Money laundering": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "AML Evasion": [
+    "5"
+  ],
+  "APT Intrusion": [
+    "3"
+  ],
+  "Compliance Evasion": [
+    "3"
+  ],
+  "Deepfake Impersonation": [
+    "3"
+  ],
+  "Document Forgery": [
+    "3"
+  ],
+  "Encryption Breaking": [
+    "3"
+  ],
+  "Hacking Techniques": [
+    "3"
+  ],
+  "Identity Fraud": [
+    "2",
+    "3"
+  ],
+  "Imposter Websites": [
+    "3"
+  ],
+  "Insider Threats": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "Malware Development": [
+    "3"
+  ],
+  "Market Manipulation": [
+    "1",
+    "2",
+    "3",
+    "5"
+  ],
+  "Phishing & Social Engineering": [
+    "1",
+    "3"
+  ],
+  "Ransomware Attacks": [
+    "3"
+  ],
+  "Scam Facilitation": [
+    "3"
+  ],
+  "Supply Chain Attacks": [
+    "3"
+  ],
+  "Algorithmic Trading Manipulation": [
+    "4"
+  ],
+  "Credit Scoring Fraud": [
+    "4"
+  ],
+  "Cyber Sabotage": [
+    "2",
+    "4",
+    "5"
+  ],
+  "Financial Statement Fraud": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Identity Document Fraud": [
+    "4"
+  ],
+  "Insider Trading": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "Insurance Fraud": [
+    "2",
+    "4",
+    "5"
+  ],
+  "Investment Fraud": [
+    "4"
+  ],
+  "Money Laundering": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Regulatory Evasion": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Sanctions Evasion": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Transaction Structuring": [
+    "4"
+  ],
+  "AI Fraud Detection Evasion": [
+    "5"
+  ],
+  "AI Governance Evasion": [
+    "5"
+  ],
+  "AML Regulatory Arbitrage": [
+    "5"
+  ],
+  "Cybersecurity Exploits": [
+    "2",
+    "4",
+    "5"
+  ],
+  "Data Privacy Violations": [
+    "1",
+    "5"
+  ],
+  "Discriminatory Lending": [
+    "5"
+  ],
+  "Financial Statement Fabrication": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Intellectual Property Theft": [
+    "5"
+  ],
+  "Money Laundering Structuring": [
+    "1",
+    "2",
+    "4",
+    "5"
+  ],
+  "Mortgage Fraud": [
+    "5"
+  ]
+}
