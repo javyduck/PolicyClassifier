@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# policy_inference.py
-# -- Inference & evaluation with multi-label mapping (prediction-rewrite style)
-
 import setGPU            # optional: pins GPU usage
 import os, time, argparse
 import pandas as pd
@@ -79,6 +75,7 @@ print(f"Total test requests: {len(tests)}")
 
 # ─────────────────── Prepare prompts ───────────────────────────────────────────
 prompts, docs, cats, true_labels = [], [], [], []
+reqs = []
 for abbr, cat, label, text in tests:
     conv = [
         {"role": "system", "content": system_prompt},
@@ -94,7 +91,8 @@ for abbr, cat, label, text in tests:
     docs.append(abbr)
     cats.append(cat)
     true_labels.append(label)
-
+    reqs.append(text)
+    
 # ─────────────────── Inference ───────────────────────────────────────────────
 preds = []
 device = model.device
@@ -181,3 +179,40 @@ print(f"\nOverall Precision: {overall_precision:.2%}")
 print(f"Overall Recall   : {overall_recall:.2%}")
 print(f"Overall F1       : {overall_f1:.2%}")
 print(f"Overall FPR      : {overall_fpr:.2%}")
+
+## save records
+num_docs  = len(doc_info)
+records   = []
+
+for doc, cat, text, pred in zip(docs, cats, reqs, adj_preds):
+    # ground‑truth “allowed” list
+    allowed = mapping.get(cat.lower(), []) if cat and not pd.isna(cat) else []
+    flag    = bool(allowed)
+
+    # Boolean map for the ground truth
+    gt_map = {str(i): (str(i) in allowed) for i in range(1, num_docs + 1)}
+
+    # Boolean map for the model prediction
+    if pred == "None":
+        pred_map = {str(i): False for i in range(1, num_docs + 1)}
+    else:
+        if pred in allowed:
+            pred_map = gt_map
+        else:
+            pred_map = {str(i): (str(i) == pred) for i in range(1, num_docs + 1)}
+
+    records.append({
+        "doc":          doc,
+        "request":      text,
+        "ground_truth": allowed,      # list form
+        "flag":         flag,
+        "prediction":   pred_map      # model’s decision
+    })
+
+out_path = "eval_records.jsonl"
+with open(out_path, "w") as f:
+    for rec in records:
+        json.dump(rec, f)
+        f.write("\n")
+
+print(f"\nSaved {len(records)} request records to {out_path}")
